@@ -1,18 +1,12 @@
 <script lang="ts">
+    import { Toaster } from "$lib/components/ui/sonner";
     import "../app.css";
 
     let { children } = $props();
 </script>
 
-<div class="app">
-    <main>
-        {@render children()}
-    </main>
+<Toaster richColors={true} position="top-center" />
 
-    <footer>
-        <p>
-            visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to
-            learn about SvelteKit
-        </p>
-    </footer>
-</div>
+<main>
+    {@render children()}
+</main>
